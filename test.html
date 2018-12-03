@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Pittsburgh Strong</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel='icon' href='favicon.ico' type='image/x-icon'/>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<script src="index.js"> </script>
+
+<!-- Templating framework borrowed from w3 schools-->
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- Sidebar/navigation menu -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-animate-left w3-text-yellow w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
+  <h3 class="w3-padding-64 w3-center"><b>LOOK FOR<br>THE HELPERS</b></h3>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
+  <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">MOMENTS</a> 
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a> 
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+<!-- Top menu on smaller screens (~responsive~)-->
+<header class="w3-container w3-top w3-hide-large w3-black w3-xlarge w3-padding-16">
+  <span class="w3-left w3-padding w3-text-yellow">PITTSBURGH STRONG</span>
+  <a href="javascript:void(0)" class="w3-right w3-button w3-black" onclick="w3_open()">☰</a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens (~responsive~)-->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- Push down content on small screens --> 
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+  
+  <!-- Main photo grid -->
+  <div class="w3-row">
+    <div class="w3-third">
+      <img src="./images/stronger.jpg" style="width:100%" onclick="onClick(this)" alt="Original 'Stronger than Hate' logo, designed by Tim Hindes of South Park, PA (Pittsburgh Post-Gazette)">
+      <img src="./images/vigil1027.jpg" style="width:100%" onclick="onClick(this)" alt="Neighbors of Squirrel Hill gather to grieve at the Forbes Avenue and Murray Avenue intersection mere hours after the shooting took place (Pittsburgh Post-Gazette)">
+      <img src="./images/soldiersSailors.jpg" style="width:100%" onclick="onClick(this)" alt="Members of the Pittsburgh community and more gather at Soldiers and Sailors Memorial Museum for an interfaith vigil (Pittsburgh Post-Gazette)">
+    </div>
+
+    <div class="w3-third">
+      <img src="./images/PensGame.png" style="width:100%" onclick="onClick(this)" alt="The Pittsburgh Penguins invite police officers involved in the shooting for the ceremonial puck drop at the beginning of the Penguins vs Islanders game. (Pittsburgh Penguins, Twitter)">
+      <img src="./images/SteelersCleats.png" style="width:100%" onclick="onClick(this)" alt="Pittsburgh Steelers' quarterback Ben Roethlisberger wears custom cleats on game day in support of the victims. (Pittsburgh Steelers, Instagram)">
+      <img src="./images/SteelerSign.jpg" style="width:100%" onclick="onClick(this)" alt="A Steeler game attendee reminds others what the city is made of with a custom-made sign. (Pittsburgh Steelers, Twitter)">
+    </div>
+    
+    <div class="w3-third">
+      <img src="./images/strongerSticker.jpg_large" style="width:100%" onclick="onClick(this)" alt="Local polling stations in Squirrel Hill offer a new take on the 'I Voted' sticker during midterm elections. (The Incline)">
+      <img src="./images/BlueSky.jpg" style="width:100%" onclick="onClick(this)" alt="The city of Pittsburgh's downtown skyline lights up blue in honor of the Tree of Life Synagogue (KDKA News)">
+      <img src="./images/ManorTheater2.jpg" style="width:100%" onclick="onClick(this)" alt="Local Squirrel Hill movie theater uses their marquee to send a message of hope to visitors">
+    </div>
+
+    <div class="w3-third">
+        <img src="./images/PittTribute.jpg" style="width:100%" onclick="onClick(this)" alt="Over 3,000 attendees gather at the University of Pittsburgh as part of a peaceful vigil to remember the victims (Pittsburgh Post-Gazette)">
+        <img src="./images/stronger-than-hate-jersey.jpg" style="width:100%" onclick="onClick(this)" alt="The Pittsburgh Penguins add a new patch to their uniform in memory of the victims (Pittsburgh Penguins Foundation)">
+        <img src="./images/thanks.jpg_large" style="width:100%" onclick="onClick(this)" alt="Tom Hanks and Joanne Rogers (wife of the late Mr. Rogers) sing 'Won't You Be My Neighbor' together at a gathering of peace in Point State Park (Pittsburgh Post-Gazette)">
+      </div>
+
+    <div class="w3-third">
+        <img src="./images/officer.jpg" style="width:100%" onclick="onClick(this)" alt="A young boy gifting a local policeman cookies and a handwritten thank you note. (CBS News)">
+        <img src="./images/muslim.jpg_large" style="width:100%" onclick="onClick(this)" alt="As a sign of compassion, the Islamic Center of Pittsburgh raises over $200,000 to cover funeral costs and medical expenses of the victims (Trib Total Media)">
+        <img src="./images/cmuART.jpg" style="width:100%" onclick="onClick(this)" alt="Memorial at Carnegie Mellon University offers students an outlet to visibly express their sorrow, prayers, support and hope. (CMU Piper)">
+      </div>
+
+    <div class="w3-third">
+          <img src="./images/therapydog.jpg" style="width:100%" onclick="onClick(this)" alt="A young child in Squirrel Hill smiles as she hugs therapy dog Mirabella Faith, a labradoodle, during Squirrel Hill's CommUNITY Day celebration days after the shooting. (Pittsburgh Post-Gazette)">
+          <img src="./images/jhearts1.png" style="width:100%" onclick="onClick(this)" alt="More than 2,000 “Jewish Hearts,” created by more than 1,000 crafters from around the world and hung by 40 volunteers, have decorated the Steel City as a way to remember those affected by the attack (Jewish Hearts for Pittsburgh)">
+          <img src="./images/jhearts3.jpg" style="width:100%" onclick="onClick(this)" alt="Jewish Hearts for Pittsburgh crafts taped by volunteers hang on a mural of Mahatma Gandhi on Murray Avenue in Squirrel Hill (Pittsburgh Post-Gazette)">
+        </div>
+
+  </div>
+  
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- About section -->
+  <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="about">
+    <img src="./images/TOL-new.jpg_large" alt="Pittsburgh" class="w3-image w3-padding-32" width="600" height="650">
+    <p> Tree of Life * Or L'Simcha Congregation Synagogue (November 2018) </p>
+    <div class="w3-content w3-justify" style="max-width:600px">
+      <h4>About</h4>
+      <p>On October 27th, 2018, the unspeakable occurred when a gunman burst into a busy Pittsburgh synagogue and opened fire, killing 11 people and injuring six others. Since then, the communities of Squirrel Hill and Pittsburgh at large have been trying to rebuild and pick up the pieces. In particular, a famous quote by the late Mister Rogers (a former Squirrel Hill resident) has given people hope: 
+        <p></p>
+        <i>“When I was a boy and I would see scary things in the news, my mother would say to me, "Look for the helpers. You will always find people who are helping.”</i> - Fred Rogers
+        <p></p>
+      This project was made to help formulate a restorative narrative surrounding the horrific tragedy in an effort to move forward. "Restorative narrative" is a genre of stories that demonstrate how people and communities are making a meaningful progression from a place of despair to a place of resilience. Through this project, we aim to show how Pittsburgh has demonstrated to the rest of the world how to be a good neighbor by showing examples of "the helpers" throughout the city.
+      </p>
+      <p><center><strong>In loving memory of our fallen neighbors:</strong> 
+        <br>Joyce Fienberg, 75, Oakland
+        <br>Richard Gottfried, 65, Ross Township
+        <br>Rose Mallinger, 97, Squirrel Hill
+        <br>Jerry Rabinowitz, 66, Edgewood
+        <br>Cecil Rosenthal, 59, Squirrel Hill
+        <br>David Rosenthal, 54, Squirrel Hill
+        <br>Bernice Simon, 84, Wilkinsburg
+        <br>Sylvan Simon, 87, Wilkinsburg
+        <br>Daniel Stein, 71, Squirrel Hill
+        <br>Melvin Wax, 88, Squirrel Hill
+        <br>Irving Younger, 69, Mount Washington </center></p>
+
+      <p><center>For additional resources, please visit  <a href="thankyou.html">here</a>.</center></p>
+      <hr class="w3-opacity">
+      
+
+  <!-- How Can We Help section -->
+  <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
+    <div class="w3-content" style="max-width:600px">
+      <h4 class="w3-center"><b>Get in touch</b></h4>
+      <p>Do you have a message of hope you'd like to share? </p>
+      <form action="thankyou.html" target="_blank">
+        <div class="w3-section">
+          <label>Name</label>
+          <input class="w3-input w3-border" type="text" name="Name" required>
+        </div>
+        <div class="w3-section">
+          <label>Email</label>
+          <input class="w3-input w3-border" type="text" name="Email" required>
+        </div>
+        <div class="w3-section">
+          <label>Message</label>
+          <input class="w3-input w3-border" type="text" name="Message" required>
+        </div>
+        <button type="submit" class="w3-button w3-block w3-black w3-margin-bottom">
+          <a href="mailto:lccarter@andrew.cmu.edu?Subject=Message%20Of%20Hope" target="_top">Send Message</a>
+        </button>
+      </form>
+    </div>
+  </div>
+
+
+<!-- End page content -->
+</div>
+</body>
+</html>
